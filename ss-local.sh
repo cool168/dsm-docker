@@ -3,9 +3,6 @@
 INSTALL_FLAG="/app/ss-local.installed"
 
 if [ ! -f "$INSTALL_FLAG" ]; then
-	dpkg -i /app/libmbedcrypto0_*.deb
-	dpkg -i /app/shadowsocks-libev_*.deb
-	rm /etc/init.d/shadowsocks-libev
 	touch $INSTALL_FLAG
 fi
 
@@ -13,11 +10,6 @@ if [ $ENABLE_HTTP = "yes" ]; then
 	INSTALL_FLAG="/app/privoxy.installed"	
 	
 	if [ ! -f "$INSTALL_FLAG" ]; then
-		dpkg -i /app/libpopt0_*.deb
-		dpkg -i /app/cron_*.deb
-		dpkg -i /app/logrotate_*.deb
-		dpkg -i /app/privoxy_*.deb
-		rm /etc/init.d/privoxy
 
 		PRIVOXY_CONF="/app/privoxy.conf"
 		echo listen-address 0.0.0.0:$HTTP_PORT > $PRIVOXY_CONF
