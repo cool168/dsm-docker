@@ -21,12 +21,12 @@ RUN	dpkg -i /app/libpopt0_*.deb
 RUN	dpkg -i /app/cron_*.deb
 RUN	dpkg -i /app/logrotate_*.deb
 RUN	dpkg -i /app/privoxy_*.deb
-RUN rm /etc/init.d/privoxy
+RUN     rm /etc/init.d/privoxy
 
 RUN	dpkg -i /app/libc6_*.deb
 RUN	dpkg -i /app/libc6-i386_*.deb
 RUN	dpkg -i /app/lib32z1_*.deb
 
-RUN rm RUN rm /app/*.deb
+RUN     rm -rf /app/*.deb
 
 WORKDIR /app
