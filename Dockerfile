@@ -6,6 +6,14 @@ MAINTAINER Cuteribs <ericfine1981@live.com>
 #RUN sed -i.bak 's/archive/cn\.archive/' /etc/apt/sources.list
 
 # Deploys files
+RUN mkdir -p /app
+RUN mkdir -p /app/kcp
+RUN chmod +x /app
+COPY ./client_linux_amd64 /app/kcp
+COPY ./server_linux_amd64 /app/kcp
+RUN chmod +x /app/kcp/client_linux_amd64
+RUN chmod +x /app/kcp/server_linux_amd64
+
 ADD ./packages/xware.tar.gz /app/
 ADD ./packages/kcp.tar.gz /app/
 ADD ./packages/3proxy.tar.gz /app/
