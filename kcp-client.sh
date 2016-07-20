@@ -9,7 +9,7 @@ fi
 
 echo ${LOCAL_PORT=':12948'}
 
-echo ${KCP_PORT='vps:29900'}
+echo ${KCP_PORT='vps:39900'}
 
 echo ${MODE='fast2'}
 	
