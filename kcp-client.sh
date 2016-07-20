@@ -3,7 +3,6 @@
 INSTALL_FLAG="/app/kcp-client.installed"
 
 if [ ! -f "$INSTALL_FLAG" ]; then
-	chmod +x /app/kcp/client_linux_amd64	
 	touch $INSTALL_FLAG
 fi
 
