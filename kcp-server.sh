@@ -3,7 +3,7 @@
 INSTALL_FLAG="/app/kcp-server.installed"
 
 if [ ! -f "$INSTALL_FLAG" ]; then
-	chmod +x /app/kcp/kcp-server	
+	chmod +x /app/kcp/server_linux_amd64	
 	touch $INSTALL_FLAG
 fi
 
@@ -24,4 +24,4 @@ echo ${CRYPT='none'}
 echo ${KEY='cuteribs'}
 
 sleep 1
-/app/kcp/kcp-server -l $KCP_PORT -t $TARGET_PORT -mode $MODE -mtu $MTU -sndwnd $SNDWND -rcvwnd $RCVWND -crypt $CRYPT -key $KEY
+/app/kcp/server_linux_amd64 -l $KCP_PORT -t $TARGET_PORT -mode $MODE -mtu $MTU -sndwnd $SNDWND -rcvwnd $RCVWND -crypt $CRYPT -key $KEY
