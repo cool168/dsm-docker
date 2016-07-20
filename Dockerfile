@@ -15,7 +15,7 @@ RUN chmod +x /app/kcp/client_linux_amd64
 RUN chmod +x /app/kcp/server_linux_amd64
 
 ADD ./packages/xware.tar.gz /app/
-ADD ./packages/kcp.tar.gz /app/
+#ADD ./packages/kcp.tar.gz /app/
 ADD ./packages/3proxy.tar.gz /app/
 COPY ./packages/*.deb /app/
 COPY ./*.sh /app/
