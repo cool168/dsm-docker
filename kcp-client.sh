@@ -27,9 +27,5 @@ echo ${CONN=1}
 echo ${DSCP=46}
 
 sleep 1
-#/app/kcp/client_linux_amd64 -l $LOCAL_PORT -r $KCP_PORT -mode $MODE -mtu $MTU -sndwnd $SNDWND -rcvwnd $RCVWND -crypt $CRYPT -key $KEY -conn $CONN -dscp $DSCP
-
-/app/kcp/client_linux_amd64 -l $LOCAL_PORT -r $KCP_PORT -mode $MODE -mtu $MTU -sndwnd $SNDWND -rcvwnd $RCVWND -crypt $CRYPT -key $KEY -conn $CONN -dscp $DSCP > /dev/null 2>&1
-sleep 1
-
+/app/kcp/client_linux_amd64 -l $LOCAL_PORT -r $KCP_PORT -mode $MODE -mtu $MTU -sndwnd $SNDWND -rcvwnd $RCVWND -crypt $CRYPT -key $KEY -conn $CONN -dscp $DSCP
 
