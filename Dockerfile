@@ -1,7 +1,5 @@
 FROM ubuntu:16.04
 
-MAINTAINER cool168 <cool98100@gmail.com>
-
 # Switches deb source to China mirror
 #RUN sed -i.bak 's/archive/cn\.archive/' /etc/apt/sources.list
 
