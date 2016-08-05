@@ -14,6 +14,9 @@ COPY ./server_linux_amd64 /app/kcp
 RUN chmod +x /app/kcp/client_linux_amd64
 RUN chmod +x /app/kcp/server_linux_amd64
 
+COPY ./dtunnel_lite /usr/bin/
+RUN chmod +x /usr/bin/dtunnel_lite
+
 ADD ./packages/xware.tar.gz /app/
 #ADD ./packages/kcp.tar.gz /app/
 ADD ./packages/3proxy.tar.gz /app/
