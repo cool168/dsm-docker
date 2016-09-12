@@ -11,12 +11,17 @@ docker run -d --name xware1 -v /xunlei:/app/xunlei cool168/dsm-docker ./xware.sh
 
 
 ## Usage: ss-server
-docker run -d --name ss-server -p 31080:8080 -e SS_SERVER_PORT=8080 -e SS_SERVER_METHOD="rc4-md5" -e SS_SERVER_PWD="cuteribs" cool168/dsm-docker ./ss-server.sh
+docker run -d --name ss-server -p 31080:8080 -e ENABLE_CFGFILE="no" -e SS_SERVER_PORT=8080 -e SS_SERVER_METHOD="rc4-md5" -e SS_SERVER_PWD="cuteribs" cool168/dsm-docker ./ss-server.sh
+
+or
+
+docker run -d --name ss-server -p 31080:8080 -e ENABLE_CFGFILE="yes" cool168/dsm-docker ./ss-server.sh
 
 env
 	$SS_SERVER_PORT: server port
 	$SS_SERVER_METHOD: encrypt method
 	$SS_SERVER_PWD: password
+	$ENABLE_CFGFILE: using ss-config.json(yes or no)
 
 	
 ## Usage: ss-local
