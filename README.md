@@ -15,7 +15,7 @@ docker run -d --name ss-server -p 31080:8080 -e ENABLE_CFGFILE="no" -e SS_SERVER
 
 or
 
-docker run -d --name ss-server -p 31080:8080 -e ENABLE_CFGFILE="yes" cool168/dsm-docker ./ss-server.sh
+docker run -d --name ss-server -p 31080:8080 -e ENABLE_CFGFILE="yes" -v /home/dock/ss-config.json:/etc/ss-config.json cool168/dsm-docker ./ss-server.sh
 
 env
 	$SS_SERVER_PORT: server port
