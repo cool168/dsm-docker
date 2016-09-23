@@ -1,5 +1,5 @@
-## Update kcptun to 20160919
-https://github.com/xtaci/kcptun/releases/tag/v20160919
+## Update kcptun to 20160922
+https://github.com/xtaci/kcptun/releases/tag/v20160922
 ## Usage：dog tunnel server
 http://dog-tunnel.tk/  or   https://github.com/vzex/dog-tunnel/
 docker run -d -p 8443:8443/udp -p 8090:8090 -e SERVER_PORT="0.0.0.0:8443" -e PASSWD="test" -e XOR_CODE="1234123" cool168/dsm-docker ./dt_server.sh
