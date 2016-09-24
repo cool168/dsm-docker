@@ -24,7 +24,7 @@ fi
 if [ $ENABLE_HTTP = "yes" ]
 then
 	sleep 5
-	ss-local -s $SS_SERVER_HOST -p $SS_SERVER_PORT -b 0.0.0.0 -l $SS_LOCAL_PORT -m $SS_SERVER_METHOD -k $SS_SERVER_PWD -t 60 -u -A &
+	ss-local -s $SS_SERVER_HOST -p $SS_SERVER_PORT -b 0.0.0.0 -l $SS_LOCAL_PORT -m $SS_SERVER_METHOD -k $SS_SERVER_PWD -t 60 -u -A
 	while [[ true ]]; do
 		sleep 1
 	done
