@@ -8,7 +8,7 @@ docker run -d -p 8443:8443/udp -p 8090:8090 -e SERVER_PORT="0.0.0.0:8443" -e PAS
 http://dog-tunnel.tk/  or   https://github.com/vzex/dog-tunnel/
 docker run -d -p 8090:8090 -e SERVER_PORT="remoteip:8443" -e LOCAL_PORT=":8090" -e PASSWD="test" -e XOR_CODE="1234123" -e ACT_PORT="127.0.0.1:443" -e RMODE="yes" cool168/dsm-docker ./dt_client.sh
 
-## Usage:ss2kcp client
+## Usage: ss2kcp client
 docker run -d -e SS_SERVER_METHOD="chacha20" -e SS_SERVER_PWD="ss-abcd1234" -e KCP_PORT="vps:port" -e KEY="kcp-abcd1234" -p 8989:8989 cool168/dsm-docker ./ss2kcp-client.sh
 
 ## Usage: xware
