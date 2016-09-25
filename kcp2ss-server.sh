@@ -7,8 +7,6 @@ if [ ! -f "$INSTALL_FLAG" ]; then
 fi
 echo ${KCP_PORT=':29900'}
 
-echo ${TARGET_PORT='127.0.0.1:12948'}
-
 echo ${MODE='fast2'}
 	
 echo ${MTU=1400}
@@ -17,7 +15,7 @@ echo ${SNDWND=1024}
 	
 echo ${RCVWND=1024}
 	
-echo ${CRYPT='none'}
+echo ${CRYPT='salsa20'}
 	
 echo ${KEY='cool168'}
 
@@ -30,4 +28,6 @@ echo ${SS_SERVER_PWD='cool168'}
 sleep 1
 ss-server -s 0.0.0.0 -p $SS_SERVER_PORT -m $SS_SERVER_METHOD -k $SS_SERVER_PWD -t 60 -u -A >/dev/null 2>&1 &
 sleep 5
-/app/kcp/server_linux_amd64 -l $KCP_PORT -t 127.0.0.1:$SS_SERVER_PORT -mode $MODE -nocomp -mtu $MTU -sndwnd $SNDWND -rcvwnd 2048 -crypt salsa20 -key $PWD2 >/dev/null 2>&1
+/app/kcp/server_linux_amd64 -l $KCP_PORT -t 127.0.0.1:$SS_SERVER_PORT -mode $MODE -nocomp -mtu $MTU -sndwnd $SNDWND -rcvwnd $RCVWND -crypt $CRYPT -key $KEY >/dev/null 2>&1
+
+
