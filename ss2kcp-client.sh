@@ -30,7 +30,7 @@ echo ${SS_LOCAL_PORT=8989}
 
 echo ${SS_SERVER_METHOD='aes-256-cfb'}
 
-SS_SERVER_HOST=$(/sbin/ip route|awk '/scope/ { print $9 }')
+SS_SERVER_HOST=$(curl http://instance-data/latest/meta-data/local-ipv4)
 
 echo $SS_SERVER_HOST
 
