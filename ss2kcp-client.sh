@@ -32,6 +32,8 @@ echo ${SS_SERVER_METHOD='aes-256-cfb'}
 
 SS_SERVER_HOST=$(/sbin/ip route|awk '/scope/ { print $9 }')
 
+echo $SS_SERVER_HOST
+
 sleep 1
 ss-local -s $SS_SERVER_HOST -p $LOCAL_PORT -b 0.0.0.0 -l $SS_LOCAL_PORT -m $SS_SERVER_METHOD -k $SS_SERVER_PWD -t 60 -u -A &
 sleep 5
