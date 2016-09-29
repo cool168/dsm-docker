@@ -10,6 +10,8 @@ echo ${LOCAL_PORT=12948}
 
 echo ${KCP_PORT='vps:29900'}
 
+echo ${SHOW_LOGS='yes'}
+
 echo ${MODE='fast2 -nocomp -autoexpire 60'}
 	
 echo ${MTU=1400}
