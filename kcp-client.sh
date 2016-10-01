@@ -20,7 +20,7 @@ echo ${RCVWND=1024}
 	
 echo ${CRYPT='salsa20'}
 	
-echo ${KEY='cuteribs'}
+echo ${KEY='cool168'}
 
 echo ${CONN=1}
 
