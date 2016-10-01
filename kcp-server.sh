@@ -20,7 +20,7 @@ echo ${RCVWND=1024}
 	
 echo ${CRYPT='salsa20'}
 	
-echo ${KEY='cuteribs'}
+echo ${KEY='cool168'}
 
 sleep 1
 /app/kcp/server_linux_amd64 -l $KCP_PORT -t $TARGET_PORT -mode $MODE -mtu $MTU -sndwnd $SNDWND -rcvwnd $RCVWND -crypt $CRYPT -key $KEY
