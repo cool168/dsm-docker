@@ -10,7 +10,7 @@ echo ${KCP_PORT=':29900'}
 
 echo ${TARGET_PORT='127.0.0.1:12948'}
 
-echo ${MODE='fast2'}
+echo ${MODE='fast2 -nocomp'}
 	
 echo ${MTU=1350}
 	
@@ -18,7 +18,7 @@ echo ${SNDWND=1024}
 	
 echo ${RCVWND=1024}
 	
-echo ${CRYPT='none'}
+echo ${CRYPT='salsa20'}
 	
 echo ${KEY='cuteribs'}
 
