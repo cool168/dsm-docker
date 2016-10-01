@@ -10,15 +10,15 @@ echo ${LOCAL_PORT=':12948'}
 
 echo ${KCP_PORT='vps:39900'}
 
-echo ${MODE='fast2'}
+echo ${MODE='fast2 -nocomp -autoexpire 60'}
 	
 echo ${MTU=1400}
 	
-echo ${SNDWND=1024}
+echo ${SNDWND=128}
 	
 echo ${RCVWND=1024}
 	
-echo ${CRYPT='none'}
+echo ${CRYPT='salsa20'}
 	
 echo ${KEY='cuteribs'}
 
