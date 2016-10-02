@@ -2,10 +2,12 @@
 https://github.com/xtaci/kcptun/releases/tag/v20160922
 ## Usage：dog tunnel server
 http://dog-tunnel.tk/  or   https://github.com/vzex/dog-tunnel/
+
 docker run -d -p 8443:8443/udp -p 8090:8090 -e SERVER_PORT="0.0.0.0:8443" -e PASSWD="test" -e XOR_CODE="1234123" cool168/dsm-docker ./dt_server.sh
 
 ## Usage：dog tunnel client
 http://dog-tunnel.tk/  or   https://github.com/vzex/dog-tunnel/
+
 docker run -d -p 8090:8090 -e SERVER_PORT="remoteip:8443" -e LOCAL_PORT=":8090" -e PASSWD="test" -e XOR_CODE="1234123" -e ACT_PORT="127.0.0.1:443" -e RMODE="yes" cool168/dsm-docker ./dt_client.sh
 
 ## Usage: ss2kcp client
