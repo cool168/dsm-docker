@@ -11,6 +11,9 @@ docker run -d -p 8090:8090 -e SERVER_PORT="remoteip:8443" -e LOCAL_PORT=":8090" 
 ## Usage: ss2kcp client
 docker run -d -e SS_SERVER_METHOD="chacha20" -e SS_SERVER_PWD="ss-abcd1234" -e KCP_PORT="vps:port" -e KEY="kcp-abcd1234" -p 8989:8989 cool168/dsm-docker ./ss2kcp-client.sh
 
+## Usage: kcp2ss server
+docker run -d -e SS_SERVER_METHOD="chacha20" -e SS_SERVER_PWD="ss-abcd1234" -e KEY="kcp-abcd1234" -p 29900:29900 cool168/dsm-docker ./kcp2ss-server.sh
+
 ## Usage: xware
 docker run -d --name xware1 -v /xunlei:/app/xunlei cool168/dsm-docker ./xware.sh
 
