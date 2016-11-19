@@ -1,7 +1,7 @@
-#FROM ubuntu:16.04
-FROM registry.mirrors.aliyuncs.com/library/ubuntu:16.04
+FROM ubuntu:16.04
+
 # Switches deb source to China mirror
-#RUN sed -i.bak 's/archive/cn\.archive/' /etc/apt/sources.list
+RUN sed -i.bak 's/archive/cn\.archive/' /etc/apt/sources.list
 
 # Deploys files
 RUN mkdir -p /app
