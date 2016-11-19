@@ -12,13 +12,13 @@ echo ${KCP_PORT='vps:29900'}
 
 echo ${SHOW_LOGS='yes'}
 
-echo ${MODE='fast2 -nocomp -autoexpire 60'}
+echo ${MODE='fast2 -nocomp -autoexpire 300'}
 	
 echo ${MTU=1400}
 	
 echo ${SNDWND=128}
 	
-echo ${RCVWND=1024}
+echo ${RCVWND=256}
 	
 echo ${CRYPT='salsa20'}
 	
