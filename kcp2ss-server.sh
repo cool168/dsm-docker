@@ -25,8 +25,12 @@ echo ${SS_SERVER_METHOD='aes-256-cfb'}
 
 echo ${SS_SERVER_PWD='cool168'}
 
+echo ${SS_UDP="-u"}
+
+echo ${SS_OTA=""}
+
 sleep 1
-ss-server -s 127.0.0.1 -p $SS_SERVER_PORT -m $SS_SERVER_METHOD -k $SS_SERVER_PWD -t 60 -u -A >/dev/null 2>&1 &
+ss-server -s 127.0.0.1 -p $SS_SERVER_PORT -m $SS_SERVER_METHOD -k $SS_SERVER_PWD -t 60 $SS_UDP $SS_OTA >/dev/null 2>&1 &
 sleep 5
 /app/kcp/server_linux_amd64 -l $KCP_PORT -t 127.0.0.1:$SS_SERVER_PORT -mode $MODE -mtu $MTU -sndwnd $SNDWND -rcvwnd $RCVWND -crypt $CRYPT -key $KEY >/dev/null 2>&1
 
