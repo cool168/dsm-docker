@@ -1,5 +1,5 @@
-## Update kcptun to v20170308
-https://github.com/xtaci/kcptun/releases/tag/v20170308
+## Update kcptun to v20170310
+https://github.com/xtaci/kcptun/releases/tag/v20170310
 ## Usage：dog tunnel server
 http://dog-tunnel.tk/  or   https://github.com/vzex/dog-tunnel/
 
