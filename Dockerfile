@@ -6,7 +6,7 @@ RUN sed -i.bak 's/archive/cn\.archive/' /etc/apt/sources.list
 # Deploys files
 RUN mkdir -p /app
 RUN mkdir -p /app/kcp
-RUN mkdir -p /app/3proxy
+RUN mkdir -p /app/proxycfg
 RUN chmod +x /app
 COPY ./client_linux_amd64 /app/kcp
 COPY ./server_linux_amd64 /app/kcp
