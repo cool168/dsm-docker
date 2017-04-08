@@ -1,7 +1,7 @@
 #!/bin/sh
 
 INSTALL_FLAG="/app/3proxy.installed"
-CONF="/app/3proxy/3proxy.conf"
+CONF="/app/proxycfg/3proxy.conf"
 
 if [ ! -f "$INSTALL_FLAG" ]; then
 	chmod +x /app/3proxy
