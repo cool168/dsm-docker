@@ -1,5 +1,5 @@
-## Update kcptun to v20190809
-https://github.com/xtaci/kcptun/releases/download/v20190809/kcptun-linux-amd64-20190809.tar.gz
+## Update kcptun to v20190905
+https://github.com/xtaci/kcptun/releases/download/v20190905/kcptun-linux-amd64-20190905.tar.gz
 ## Usage：dog tunnel server
 http://dog-tunnel.tk/  or   https://github.com/vzex/dog-tunnel/
 
