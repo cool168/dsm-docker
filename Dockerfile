@@ -16,6 +16,9 @@ RUN chmod +x /app/kcp/server_linux_amd64
 COPY ./dtunnel_lite /usr/bin/
 RUN chmod +x /usr/bin/dtunnel_lite
 
+COPY ./dns2socks /usr/bin/
+RUN chmod +x /usr/bin/dns2socks
+
 ADD ./packages/xware.tar.gz /app/
 #ADD ./packages/kcp.tar.gz /app/
 ADD ./packages/3proxy.tar.gz /app/
